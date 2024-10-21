@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'github_key', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-                    git branch: env.GIT_BRANCH, url: "https://${GIT_USERNAME}:${GIT_PASSWORD}@${env.GITHUB_REPOSITORY}"ㅇ= ㅇ
+                    git branch: env.GIT_BRANCH, url: "https://${GIT_USERNAME}:${GIT_PASSWORD}@${env.GITHUB_REPOSITORY}"
                 }
             }
         }
